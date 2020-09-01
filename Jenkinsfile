@@ -11,7 +11,7 @@ pipeline {
             }
        
       }      
-        Stage ('Nginx deployment'){
+        Stage ('Nginxdeployment'){
            steps {
               node ('Build-nglnx') {
                  sh 'cp /home/ubuntu/workspace/nginxhtml/* /var/www/html/'
