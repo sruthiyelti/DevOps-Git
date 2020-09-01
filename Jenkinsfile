@@ -14,7 +14,7 @@ pipeline {
         stage ('Nginxdeployment'){
            steps {
               node ('Build-nglnx') {
-                 sh 'cp /home/ubuntu/workspace/nginxhtml/* /var/www/html/'
+                 sh 'sudo cp /home/ubuntu/workspace/nginxhtml/* /var/www/html/'
          
               }
            }
