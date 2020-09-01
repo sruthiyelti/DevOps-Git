@@ -1,11 +1,11 @@
 pipeline {
    agent {
-     label 'Build-nginx'
+     label 'Build-nglnx'
      }
      stages {
        stage ('Checkout') {
            steps {
-             node ('Build-nginx') {
+             node ('Build-nglnx') {
                checkout scm
              }
             }
