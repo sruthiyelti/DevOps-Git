@@ -1,6 +1,6 @@
 pipeline {
    agent {
-     label 'Build-nglnx'
+     label 'node'
      }
     parameters 
     
@@ -10,7 +10,7 @@ pipeline {
      stages {
        stage ('Checkout') {
            steps {
-             node ('Build-nglnx') {
+             node ('node') {
                checkout scm
              }
             }
