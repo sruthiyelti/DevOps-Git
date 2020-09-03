@@ -16,7 +16,12 @@ pipeline {
             }
        
        }      
-       
+          stage ('clean package') {
+            steps {
+               node ('node') {
+                 sh 'mvn package'
+               }
+              }
               
               }
               
