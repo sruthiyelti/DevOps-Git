@@ -16,16 +16,7 @@ pipeline {
             }
        
        }      
-        stage ('NginxDeployment'){
-           steps {
-              node ('Build-nglnx'){
-                sh 'sudo cp /home/ubuntu/workspace/Project-gitPipeline/* /var/www/devops/ '
-     
-              
-              }
-           }
-            
-        }
+       
               
               }
               
