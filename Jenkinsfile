@@ -16,15 +16,5 @@ pipeline {
             }
        
        }      
-          stage ('clean package') {
-            steps {
-               node ('node-machine') {
-                 sh 'mvn package'
-               }
-              }
-              
-              }
-              
-   
-   
-}
+          
+     }
