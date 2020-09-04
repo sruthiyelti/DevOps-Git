@@ -15,7 +15,7 @@ pipeline {
           stage ('NginxDeployment'){
            steps {
               node ('node-machine'){
-                sh 'sudo cp /home/ubuntu/workspace/git-integration/* /var/www/devops/ '
+                sh 'sudo cp /home/ubuntu/workspace/git-integration/* /var/www/html/ '
      
               
               }
