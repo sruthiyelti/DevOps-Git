@@ -1,14 +1,16 @@
 pipeline {
-   agent any
+   agent {
+      label 'node-machine'
+      }
     parameters 
     
            choice(choices: 'develop\nrelease\nmaster', description: 'select the branch name ' , name: 'Branch_Name')
      
     }
      stages {
-       stage ('Checkout') {
+       stage ('Checkout') { 
            steps {
-             node ('node') {
+             node ('node-machine') {
                checkout scm
              }
             }
@@ -16,7 +18,7 @@ pipeline {
        }      
           stage ('clean package') {
             steps {
-               node ('node') {
+               node ('node-machine') {
                  sh 'mvn package'
                }
               }
